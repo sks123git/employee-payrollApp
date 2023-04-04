@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-color: #f5f5f5e8;
+}
+.header-container {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Droid Sans', serif;
+  font-weight: bold;
+  background-color: #f7f9ba;
+  gap: 5px;
+}
+
+.header-logo {
+  width: 20%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.header-text {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  display: flex;
+}
+.form-container {
+  width: calc(100%-50px);
+  background-color: #ffffff;
+}
