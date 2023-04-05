@@ -56,6 +56,10 @@ form label {
 .profile {
   width: 40px;
 }
+#profile-label {
+  vertical-align: center;
+  align-items: center;
+}
 .profile-radio-content {
   display: flex;
   flex-direction: row;
@@ -64,6 +68,7 @@ form label {
   display: flex;
   flex-direction: row;
   align-items: center;
+  min-width: 0;
 }
 
 @media screen and (max-width: 800px) {
@@ -73,5 +78,8 @@ form label {
   }
   #name {
     box-sizing: border-box;
+  }
+  .profile-radio-content {
+    flex-wrap: wrap;
   }
 }
