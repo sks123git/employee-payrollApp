@@ -27,7 +27,7 @@
     </header>
     <section class="form-section">
       <div class="form-container">
-        <form action="" onsubmit="save();return false">
+        <form action="" onsubmit="save()">
           <h1 class="form-h1">Employee Payroll Form</h1>
           <div class="mob-width row-content">
             <label id="name-label" for="name">Name:</label>
@@ -37,6 +37,9 @@
               id="name"
               placeholder="Your name..."
             />
+            <small id="errormsg"
+              >Enter 1st character in uppercase, min 3 character</small
+            >
           </div>
           <!-- Profile image -->
           <div class="mob-width row-content">
