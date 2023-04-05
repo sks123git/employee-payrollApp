@@ -53,6 +53,18 @@ form label {
   width: 100%;
   padding: 12px;
 }
+.profile {
+  width: 40px;
+}
+.profile-radio-content {
+  display: flex;
+  flex-direction: row;
+}
+.profile-radio-content > label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 @media screen and (max-width: 800px) {
   .mob-width {
