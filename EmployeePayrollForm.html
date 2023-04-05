@@ -38,6 +38,7 @@
               placeholder="Your name..."
             />
           </div>
+          <!-- Profile image -->
           <div class="mob-width row-content">
             <label id="profile-label" for="profile">Profile image:</label>
             <div class="profile-radio-content">
@@ -98,6 +99,86 @@
                 />
               </label>
             </div>
+          </div>
+          <!-- for gender -->
+          <div class="mob-width row-content">
+            <label id="profile-label" for="gender">Gender:</label>
+            <div class="gender-row-content inner-content">
+              <input type="radio" name="gender" id="male" value="male" />
+              <label for="male" class="text">Male</label>
+              <input type="radio" name="gender" id="female" value="female" />
+              <label for="female" class="text">Female</label>
+            </div>
+          </div>
+          <!-- for department -->
+          <div class="mob-width row-content">
+            <label id="profile-label" for="department">Department:</label>
+            <div class="department-row-content">
+              <div class="inner-content">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="hr"
+                  id="hr"
+                  value="hr"
+                />
+                <label for="hr" class="text">Hr</label>
+              </div>
+              <div class="inner-content">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="sales"
+                  id="sales"
+                  value="sales"
+                />
+                <label for="sales" class="text">Sales</label>
+              </div>
+              <div class="inner-content">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="finance"
+                  id="finance"
+                  value="finance"
+                />
+                <label for="finance" class="text">Finance</label>
+              </div>
+              <div class="inner-content">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="engineer"
+                  id="engineer"
+                  value="engineer"
+                />
+                <label for="engineer" class="text">Engineer</label>
+              </div>
+              <div class="inner-content">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="others"
+                  id="others"
+                  value="others"
+                />
+                <label for="others" class="text">Others</label>
+              </div>
+            </div>
+          </div>
+          <!-- Salary -->
+          <div class="mob-width row-content">
+            <label id="profile-label" for="salary">Choose your salary:</label>
+            <input
+              type="range"
+              name="salary"
+              id="salary"
+              min="30000"
+              max="60000"
+              step="500"
+              value="40000"
+            />
+            <span class="salary-output text" for="salary">40000</span>
           </div>
         </form>
       </div>

@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: row;
   margin: 20px 0px;
+  align-items: center;
 }
 form label {
   min-width: 140px;
@@ -69,6 +70,17 @@ form label {
   flex-direction: row;
   align-items: center;
   min-width: 0;
+}
+.gender-row-content {
+  vertical-align: middle;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+}
+.department-row-content {
+  display: flex;
+  vertical-align: middle;
+  flex-wrap: wrap;
+  padding: 10px 0px;
 }
 
 @media screen and (max-width: 800px) {
