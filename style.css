@@ -91,6 +91,20 @@ select {
   letter-spacing: 0;
   background-color: transparent;
 }
+.buttonParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.button {
+  padding: 7px 7px;
+  background: transparent;
+  border: none;
+  font-family: 'Droid Sans', serif;
+  font-weight: 400;
+  border: 1px solid #000000;
+}
 @media screen and (max-width: 800px) {
   .mob-width {
     width: 100%;
