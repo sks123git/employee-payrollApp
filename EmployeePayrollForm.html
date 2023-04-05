@@ -27,8 +27,17 @@
     </header>
     <section class="form-section">
       <div class="form-container">
-        <form action="" onsubmit="">
-          <h1>Employee Payroll Form</h1>
+        <form action="" onsubmit="save();return false">
+          <h1 class="form-h1">Employee Payroll Form</h1>
+          <div class="mob-width row-content">
+            <label id="name-label" for="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name..."
+            />
+          </div>
         </form>
       </div>
     </section>

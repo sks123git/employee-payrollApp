@@ -25,8 +25,41 @@ body {
 
 .form-section {
   display: flex;
+  justify-content: center;
 }
 .form-container {
-  width: calc(100%-50px);
+  width: 50%;
   background-color: #ffffff;
+  padding: 30px;
+}
+.form-h1 {
+  font-size: 14px;
+  font-family: 'Droid Sans', serif;
+}
+.row-content {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+}
+form label {
+  min-width: 140px;
+  font-family: 'Droid Sans', serif;
+  padding: 12px 12px 12px 0;
+}
+.name-label {
+  display: inline-block;
+}
+#name {
+  width: 100%;
+  padding: 12px;
+}
+
+@media screen and (max-width: 800px) {
+  .mob-width {
+    width: 100%;
+    display: block;
+  }
+  #name {
+    box-sizing: border-box;
+  }
 }
