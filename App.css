@@ -1,0 +1,25 @@
+.inner-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  background-color: #ffffff;
+}
+.body-section {
+  font-family: 'Droid Sans', serif;
+  font-weight: bold;
+}
+.inner-header {
+  width: 100%;
+  margin: 0px 20px;
+  display: flex;
+  flex-basis: 0 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner-header > input {
+  height: 30px;
+}

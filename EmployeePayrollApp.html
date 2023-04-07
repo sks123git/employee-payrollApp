@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="App.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -13,7 +14,7 @@
       src="https://kit.fontawesome.com/b0f9d4c086.js"
       crossorigin="anonymous"
     ></script>
-    <title>Employee Payroll Form</title>
+    <title>Employee Payroll App</title>
   </head>
   <body>
     <header class="header-container">
@@ -25,5 +26,26 @@
         <span>Payroll</span>
       </div>
     </header>
+    <section class="body-section">
+      <div class="inner-container">
+        <div class="inner-header">
+          <label id="name-label" for="name"><h3>Employee Details</h3></label>
+          <input
+            type="button"
+            name="add"
+            id="add"
+            onclick="parent.location='EmployeePayrollForm.html'"
+            value="+ Add User"
+            height="50"
+            width="100"
+          />
+        </div>
+        <div class="inner-header">
+          <table>
+            <th></th>
+          </table>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
