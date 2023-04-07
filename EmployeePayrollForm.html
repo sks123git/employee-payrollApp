@@ -36,6 +36,7 @@
               name="name"
               id="name"
               placeholder="Your name..."
+              value=""
             />
             <small id="errormsg"
               >Enter 1st character in uppercase, min 3 character</small
@@ -261,7 +262,13 @@
                 <input type="submit" class="submitbutton button"
               /></a>
 
-              <button type="reset" class="resetbutton button">Reset</button>
+              <button
+                type="reset"
+                class="resetbutton button"
+                onclick="reset();"
+              >
+                Reset
+              </button>
             </div>
           </div>
         </form>

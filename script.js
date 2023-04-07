@@ -85,6 +85,10 @@ username.addEventListener('input', () => {
 salRange.addEventListener('input', () => {
   salary.innerHTML = salRange.value;
 });
+function reset() {
+  let str = 40000;
+  document.querySelector('salary-output').innerHTML = str;
+}
 // onform submit function save
 function save() {
   const profileImage = document.querySelector('input[name="profile"]:checked');
@@ -104,7 +108,7 @@ function save() {
       window.localStorage.getItem('employeePayrollData')
     );
   }
-
+  newEmployee.id = employeePayrollList.length;
   newEmployee.name = username.value;
   newEmployee.profileImg = profileImage.value;
   newEmployee.gender = gender.value;
