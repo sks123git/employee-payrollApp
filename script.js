@@ -1,3 +1,69 @@
+class NewEmployee {
+  id;
+  name;
+  profileImg;
+  gender;
+  department;
+  salary;
+  startDate;
+  notes;
+  get id() {
+    return this.id;
+  }
+  set id(id) {
+    this.id = id;
+  }
+
+  set name(name) {
+    this.name = name;
+  }
+  get name() {
+    return this.name;
+  }
+  get profileImg() {
+    return this.profileImg;
+  }
+
+  set profileImg(profileImg) {
+    this.profileImg = profileImg;
+  }
+
+  get gender() {
+    return this.gender;
+  }
+
+  set gender(gender) {
+    this.gender = gender;
+  }
+
+  get department() {
+    return this.department;
+  }
+
+  set department(department) {
+    this.department = department;
+  }
+  get salary() {
+    return this.salary;
+  }
+  set salary(salary) {
+    this.salary = salary;
+  }
+  get startDate() {
+    return this.startDate;
+  }
+  set startDate(startDate) {
+    this.startDate = startDate;
+  }
+  get notes() {
+    return this.notes;
+  }
+  set notes(notes) {
+    this.notes = notes;
+  }
+}
+let newEmployee = new NewEmployee();
+
 const salary = document.querySelector('.salary-output');
 const salRange = document.querySelector('#salary');
 const username = document.querySelector('#name');
@@ -32,22 +98,6 @@ function save() {
     departmentValues.push(dept.value);
   });
 
-  window.alert(
-    username.value +
-      ',' +
-      salRange.value +
-      ',' +
-      profileImage.value +
-      ',' +
-      gender.value +
-      ',' +
-      departmentValues +
-      ',' +
-      startDate +
-      ',' +
-      notes.value
-  );
-
   // //Adding data from localstorage to array
   if (window.localStorage.key(1) !== null) {
     employeePayrollList = JSON.parse(
@@ -55,15 +105,13 @@ function save() {
     );
   }
 
-  let newEmployee = {
-    name: username.value,
-    profileImg: profileImage.value,
-    gender: gender.value,
-    department: departmentValues,
-    salary: salRange.value,
-    startDate: startDate,
-    notes: notes.value,
-  };
+  newEmployee.name = username.value;
+  newEmployee.profileImg = profileImage.value;
+  newEmployee.gender = gender.value;
+  newEmployee.department = departmentValues;
+  newEmployee.salary = salRange.value;
+  newEmployee.startDate = startDate;
+  newEmployee.notes = notes.value;
 
   employeePayrollList.push(newEmployee);
 
