@@ -23,3 +23,44 @@
 .inner-header > input {
   height: 30px;
 }
+
+#display {
+  width: 100%;
+  border-style: none;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  min-width: 800px;
+}
+#display th {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3d3589;
+  padding: 10px 0px;
+  color: #ffffff;
+}
+#display td {
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+}
+td:first-child {
+  display: flex;
+  align-items: center;
+}
+
+td img:first-child {
+  margin-right: 10px;
+}
+
+.dept-label {
+  background-color: #86e187;
+  border-radius: 50%;
+  width: fit-content;
+  text-align: center;
+  padding: 1px 7px;
+  font-size: 12px;
+  display: inline-block;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
