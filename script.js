@@ -103,12 +103,12 @@ function save() {
   });
 
   // //Adding data from localstorage to array
-  if (window.localStorage.key(1) !== null) {
+  if (window.localStorage.key(0) !== null) {
     employeePayrollList = JSON.parse(
       window.localStorage.getItem('employeePayrollData')
     );
   }
-  newEmployee.id = employeePayrollList.length;
+  newEmployee.id = new Date().getDate();
   newEmployee.name = username.value;
   newEmployee.profileImg = profileImage.value;
   newEmployee.gender = gender.value;
