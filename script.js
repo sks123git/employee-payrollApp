@@ -108,7 +108,7 @@ function save() {
       window.localStorage.getItem('employeePayrollData')
     );
   }
-  newEmployee.id = new Date().getDate();
+  newEmployee.id = Date.now().toString(36);
   newEmployee.name = username.value;
   newEmployee.profileImg = profileImage.value;
   newEmployee.gender = gender.value;
