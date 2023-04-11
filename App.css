@@ -24,6 +24,14 @@
 .inner-header > input {
   height: 30px;
 }
+#add {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid rgb(72, 177, 72);
+  background-color: #d9f1d9;
+  color: #292929;
+  border-radius: 20px;
+}
 
 #display {
   width: 100%;
