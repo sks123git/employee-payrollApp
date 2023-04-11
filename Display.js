@@ -3,6 +3,7 @@ let empPayrollList;
 window.addEventListener('DOMContentLoaded', () => {
   empPayrollList = getEmployeePayrollDataFromLocalStorage();
   createInnerHtml();
+  localStorage.removeItem('editEmp');
 });
 
 const getEmployeePayrollDataFromLocalStorage = () => {

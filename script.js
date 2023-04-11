@@ -93,7 +93,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const salRange = document.querySelector('#salary');
   const username = document.querySelector('#name');
   const nameError = document.querySelector('#errormsg');
-  const notes = document.querySelector('#notes');
 
   username.addEventListener('input', () => {
     let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
@@ -144,36 +143,68 @@ function reset() {
 }
 // onform submit function save
 function save() {
+  const username = document.querySelector('#name');
   const profileImage = document.querySelector('input[name="profile"]:checked');
   const gender = document.querySelector('input[name="gender"]:checked');
   const checkbox = document.querySelectorAll('input[class="checkbox"]:checked');
   const day = document.querySelector('#day');
   const month = document.querySelector('#month');
   const year = document.querySelector('#year');
+  const notes = document.querySelector('#notes');
+  const salRange = document.querySelector('#salary');
   let startDate = day.value + '-' + month.value + '-' + year.value;
   checkbox.forEach((dept) => {
     departmentValues.push(dept.value);
   });
 
   // //Adding data from localstorage to array
-  if (window.localStorage.key(0) !== null) {
-    employeePayrollList = JSON.parse(
-      window.localStorage.getItem('employeePayrollData')
-    );
-  }
-  if (newEmployee.id == null) newEmployee.id = Date.now().toString(36);
-  newEmployee.name = username.value;
-  newEmployee.profileImg = profileImage.value;
-  newEmployee.gender = gender.value;
-  newEmployee.department = departmentValues;
-  newEmployee.salary = salRange.value;
-  newEmployee.startDate = startDate;
-  newEmployee.notes = notes.value;
 
-  employeePayrollList.push(newEmployee);
+  employeePayrollList = JSON.parse(
+    window.localStorage.getItem('employeePayrollData')
+  );
+
+  if (employeePayrollList) {
+    let empPayrollData = employeePayrollList.find(
+      (empData) => empData.id == employeePayrollObj.id
+    );
+    if (!empPayrollData) {
+      if (newEmployee.id == null) newEmployee.id = Date.now().toString(36);
+      newEmployee.name = username.value;
+      newEmployee.profileImg = profileImage.value;
+      newEmployee.gender = gender.value;
+      newEmployee.department = departmentValues;
+      newEmployee.salary = salRange.value;
+      newEmployee.startDate = startDate;
+      newEmployee.notes = notes.value;
+      employeePayrollList.push(newEmployee);
+    } else {
+      const index1 = employeePayrollList
+        .map((empData) => empData.id)
+        .indexOf(empPayrollData.id);
+      employeePayrollList.splice(index1, 1);
+      newEmployee.id = empPayrollData.id;
+      newEmployee.name = username.value;
+      newEmployee.profileImg = profileImage.value;
+      newEmployee.gender = gender.value;
+      newEmployee.department = departmentValues;
+      newEmployee.salary = salRange.value;
+      newEmployee.startDate = startDate;
+      newEmployee.notes = notes.value;
+      employeePayrollList.push(newEmployee);
+    }
+  } else {
+    if (newEmployee.id == null) newEmployee.id = Date.now().toString(36);
+    newEmployee.name = username.value;
+    newEmployee.profileImg = profileImage.value;
+    newEmployee.gender = gender.value;
+    newEmployee.department = departmentValues;
+    newEmployee.salary = salRange.value;
+    newEmployee.startDate = startDate;
+    newEmployee.notes = notes.value;
+    employeePayrollList.push(newEmployee);
+  }
 
   window.alert(employeePayrollList);
-
   window.localStorage.setItem(
     'employeePayrollData',
     JSON.stringify(employeePayrollList)
