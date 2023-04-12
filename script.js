@@ -158,16 +158,18 @@ function save() {
   });
 
   // //Adding data from localstorage to array
-
-  employeePayrollList = JSON.parse(
-    window.localStorage.getItem('employeePayrollData')
-  );
+  if (window.localStorage.key(0) !== null) {
+    employeePayrollList = JSON.parse(
+      window.localStorage.getItem('employeePayrollData')
+    );
+  }
 
   if (employeePayrollList) {
     let empPayrollData = employeePayrollList.find(
       (empData) => empData.id == employeePayrollObj.id
     );
     if (!empPayrollData) {
+      //new data to be pushed
       if (newEmployee.id == null) newEmployee.id = Date.now().toString(36);
       newEmployee.name = username.value;
       newEmployee.profileImg = profileImage.value;
@@ -178,6 +180,7 @@ function save() {
       newEmployee.notes = notes.value;
       employeePayrollList.push(newEmployee);
     } else {
+      //modify  data and push
       const index1 = employeePayrollList
         .map((empData) => empData.id)
         .indexOf(empPayrollData.id);
@@ -193,6 +196,7 @@ function save() {
       employeePayrollList.push(newEmployee);
     }
   } else {
+    //1st data
     if (newEmployee.id == null) newEmployee.id = Date.now().toString(36);
     newEmployee.name = username.value;
     newEmployee.profileImg = profileImage.value;

@@ -9,4 +9,5 @@ function remove(node) {
   empPayrollList.splice(index, 1);
   localStorage.setItem('employeePayrollData', JSON.stringify(empPayrollList));
   createInnerHtml();
+  window.location.href = 'EmployeePayrollApp.html';
 }
